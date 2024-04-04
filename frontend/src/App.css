@@ -1,0 +1,244 @@
+@import url("https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100&display=swap");
+
+/* ================================ navber ==============================*/
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Jost", sans-serif;
+  
+}
+html {
+  font-size: 62.5%;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+.conatainer{
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #1f1f38;
+  padding: 2rem;
+  color: #fff;
+}
+.menu-icon{
+  display: none;
+}
+a{
+  text-decoration: none;
+  font-size: 2rem;
+  color: black;
+  margin-right: 1.5rem;
+  font-weight: 800;
+  color: #fff;
+}
+.rigth_side ul{
+  display: flex;
+  flex-direction: row;
+}
+
+
+/* ============================== Home ==================================== */
+.Home_container{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 90vh;
+  width: 100%;
+  background-color: #2c2c6c;
+  
+}
+h1{
+  font-size: 6rem;
+  color: #fff;
+}
+h2{
+  font-size: 3rem;
+}
+.btn{
+  margin-top: 2rem;
+  padding: 2rem 2rem;
+  font-size: 2rem;
+  background-color: transparent;
+  color: #fff;
+  border: 0.1rem solid #fff;
+  border-radius: 0.6rem;
+}
+.BookImg{
+  height: 35rem;
+  width: 37rem;
+}
+
+/* ============================ add Book ============================== */
+
+.addbook_conatiner{
+  height: 85vh;
+  width: 100%;
+  background-color: #2c2c6c;
+}
+.title{
+  text-align: center;
+  padding-top: 1.5rem;
+}
+.bookItims{
+  display: flex;
+  flex-direction: column;
+  margin-top: 1rem;
+}
+.books{
+     text-align: center;
+     margin-bottom: 1rem;
+}
+input{
+  height: 4rem;
+  width: 50rem;
+  padding: 0 0.5rem;
+  border-radius: 0.5rem;
+  border: none;
+}
+textarea{
+  height: 9rem;
+  width: 50rem;
+  padding: 0.5rem 0.5rem;
+  border-radius: 0.5rem;
+  border: none;
+  resize: none;
+}
+.btn.submit{
+  margin: 1rem;
+  padding-top: 0.5;
+  height: 6rem;
+  width: 50rem;
+
+}
+
+/* ========================== card ========================== */
+.card_container{
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  background-color: #2c2c6c;
+}
+.book-list{
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  margin: 30px 30px;
+  
+}
+
+.book-card{
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  margin: 10px;
+  width: 200px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out;
+
+  &:hover{
+    transform: scale(1.05);
+  }
+}
+
+.book-card .book-img{
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.book-card .book-details{
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  background-color:#fff;
+}
+
+.book-card .book-actions{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: #f5f5f5;
+}
+
+.book-card button {
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 0.2rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+
+  &:hover{
+    background-color: #2980b9;
+  }
+}
+
+/* ============================= media query for mobile ================================ */
+@media screen and (max-width: 800px) {
+  .Home_container{
+    flex-direction: column;
+    text-align: center;
+  }
+  .menu-icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .conatainer{
+    display: flex;
+    flex-direction: column;
+  }
+  .mobile-menu-link ul li{
+    margin-top: 2rem;
+  }
+  .mobile-menu-link ul li:hover{
+    transition: 1s;
+    background-color: #2980b9;
+  }
+  .Home_container,.right_side {
+  padding-top: 2rem;
+ }
+ .left_side{
+  display: flex;
+  justify-content: space-around;
+  gap: 7rem;
+ }
+ .conatainer,.left_side h2{
+  font-size: 1.8rem;
+ }
+ .card_container{
+  padding: auto;
+ }
+ .title{
+  font-size: 2.5rem;
+ }
+ .card_container .book-list{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+ }
+ .addbook_conatiner input{
+  width: 35rem;
+ }
+ .books textarea{
+  width: 35rem;
+ }
+ .books .btn.submit{
+  width: 35rem;
+ }
+ .conatainer .rigth_side{
+  display: none;
+ }
+}
+
