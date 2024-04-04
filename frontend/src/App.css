@@ -194,6 +194,9 @@ textarea{
     justify-content: center;
     align-items: center;
   }
+  .titles{
+    font-size: 5rem;
+  }
   .conatainer{
     display: flex;
     flex-direction: column;
