@@ -7,7 +7,7 @@ import {ConnectMongo} from  './db.js'
 const app = express()
 
 config({
-    path:'./config/config.env'
+    path:'.env'
 });
 ConnectMongo();
 app.use(cors({
