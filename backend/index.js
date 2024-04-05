@@ -2,6 +2,7 @@ import express from "express"
 import cors from 'cors'
 import bookRouter from './router/bookRouter.js'
 import {config} from 'dotenv'
+const PORT=process.env.PORT || 8000
 
 import {ConnectMongo} from  './db.js'
 const app = express()
@@ -20,6 +21,6 @@ app.use(cors({
 app.use(express.json());
 app.use("/api",bookRouter)
 
-app.listen(process.env.PORT,() => {
-    console.log(`Server is running on http://localhost:${process.env.PORT}`)
+app.listen(PORT,() => {
+    console.log(`Server is running on http://localhost:${PORT}`)
 });
